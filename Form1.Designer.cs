@@ -30,6 +30,7 @@ namespace CHIPLUS_Minimal_Player
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.WebView = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.WebView)).BeginInit();
@@ -51,6 +52,7 @@ namespace CHIPLUS_Minimal_Player
             // 
             // notifyIcon
             // 
+            this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
             this.notifyIcon.Text = "CHIPLUS_Minimal_Player";
             this.notifyIcon.Visible = true;
             // 
