@@ -179,6 +179,16 @@ namespace CHIPLUS_Minimal_Player
             toolStripMenuItemhome.Click += ToolStripMenuItem_Clickhome;
             contextMenuStrip.Items.Add(toolStripMenuItemhome);
 
+            ToolStripMenuItem toolStripMenuItemhomeKLMS = new ToolStripMenuItem();
+            toolStripMenuItemhomeKLMS.Text = "トップページ(Kagawa-LMS)";
+            toolStripMenuItemhomeKLMS.Click += ToolStripMenuItem_ClickhomeKLMS;
+            contextMenuStrip.Items.Add(toolStripMenuItemhomeKLMS);
+
+            ToolStripMenuItem toolStripMenuItemhomeEhime = new ToolStripMenuItem();
+            toolStripMenuItemhomeEhime.Text = "トップページ(Ehime-LMS)";
+            toolStripMenuItemhomeEhime.Click += ToolStripMenuItem_ClickhomeEhime;
+            contextMenuStrip.Items.Add(toolStripMenuItemhomeEhime);
+
 
             /*
                         ToolStripMenuItem toolStripMenuItemexp = new ToolStripMenuItem();
@@ -261,6 +271,16 @@ namespace CHIPLUS_Minimal_Player
         {
             WebView.CoreWebView2.Navigate("https://kadai-moodle.kagawa-u.ac.jp/");
         }
+
+        private void ToolStripMenuItem_ClickhomeKLMS(object sender, EventArgs e)
+        {
+            WebView.CoreWebView2.Navigate("https://lms-sp.itc.kagawa-u.ac.jp/index.html");
+        }
+        private void ToolStripMenuItem_ClickhomeEhime(object sender, EventArgs e)
+        {
+            WebView.CoreWebView2.Navigate("https://moodle35.lms.ehime-u.ac.jp/moodle/");
+        }
+
         /*
                 private void ToolStripMenuItem_Clickexp(object sender, EventArgs e)
                 {
